@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Open FastEdit
+    url: https://fastedit.net
+    about: Use the editor directly in your browser
+  - name: Guides & Tutorials
+    url: https://fastedit.net/guides
+    about: Learn how to use FastEdit's features

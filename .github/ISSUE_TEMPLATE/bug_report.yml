@@ -1,0 +1,62 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug. What did you expect vs. what actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this?
+      value: |
+        1. Go to fastedit.net
+        2. Upload a file (format: …, size: …)
+        3. Select output format: …
+        4. Click export
+        5. See error / unexpected result
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Editor mode
+      options:
+        - Still image
+        - Animated / Video
+        - Batch processing
+    validations:
+      required: true
+  - type: input
+    id: input-format
+    attributes:
+      label: Input format
+      placeholder: "e.g. GIF, MP4, HEIC, WebP"
+  - type: input
+    id: output-format
+    attributes:
+      label: Output format
+      placeholder: "e.g. WebP, MP4, AVIF"
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "e.g. Chrome 125, Firefox 127, Safari 17.5"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "e.g. Windows 11, macOS 15, Ubuntu 24.04"
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (if any)
+      description: Open DevTools (F12) → Console tab → paste any red error messages
+      render: shell
